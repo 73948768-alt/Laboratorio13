@@ -19,9 +19,16 @@ def calcular_promedio():
     promedio = sum(estudiantes.values()) / len(estudiantes)
     print(f"Promedio general: {promedio:.2f}")
 
+def eliminar_estudiante():
+    nombre = input("Ingrese el nombre del estudiante a eliminar: ")
+    if nombre in estudiantes:
+        del estudiantes[nombre]
+        print(f"Estudiante {nombre} eliminado correctamente.\n")
+    else:
+        print("Error: Estudiante no encontrado.\n")
 
 while True:
-    print("\n1. Agregar estudiante | 2. Ver notas | 3. Ver estadisticas | 4. Salir")
+    print("\n1. Agregar | 2. Ver notas | 3. Estadisticas | 4. Eliminar | 5. Salir")
     opcion = input("Elige una opcion: ")
     if opcion == "1":
         agregar_estudiante()
@@ -30,6 +37,9 @@ while True:
     elif opcion == "3":
         calcular_promedio()
     elif opcion == "4":
+        eliminar_estudiante()
+    elif opcion == "5":
         break
     else:
         print("Opcion no valida.")
+
