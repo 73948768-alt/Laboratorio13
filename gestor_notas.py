@@ -20,6 +20,16 @@ def calcular_promedio():
     print(f"Promedio general: {promedio:.2f}")
 
 
-mostrar_notas()
-calcular_promedio()
-agregar_estudiante()
+while True:
+    print("\n1. Agregar estudiante | 2. Ver notas | 3. Ver estadisticas | 4. Salir")
+    opcion = input("Elige una opcion: ")
+    if opcion == "1":
+        agregar_estudiante()
+    elif opcion == "2":
+        mostrar_notas()
+    elif opcion == "3":
+        calcular_promedio()
+    elif opcion == "4":
+        break
+    else:
+        print("Opcion no valida.")
