@@ -19,6 +19,7 @@ def calcular_promedio():
     promedio = sum(estudiantes.values()) / len(estudiantes)
     print(f"Promedio general: {promedio:.2f}")
 
-agregar_estudiante()
+
 mostrar_notas()
 calcular_promedio()
+agregar_estudiante()
